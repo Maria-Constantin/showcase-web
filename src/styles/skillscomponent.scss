@@ -1,0 +1,50 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 1rem; /* Optional padding */
+  background-color: $light;
+}
+
+.card {
+  flex: 1; /* Ensures the card grows and shrinks to fit the container */
+  width: 100%; /* Default to 100% width */
+  max-width: 900px; /* Set a max width for larger screens */
+  margin: 0 auto; /* Center the card */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1; /* Allow the card body to grow and take up remaining space */
+  padding: 1rem;
+}
+
+.card-header {
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 0.5rem; /* Reduced padding on mobile */
+  }
+
+  .card {
+    max-width: 100%; /* Allow full width on mobile */
+    padding: 0.5rem; /* Smaller padding inside the card */
+  }
+}
+
+@media (min-width: 769px) {
+  .skills {
+    padding: 2rem; /* Larger padding on tablets/desktops */
+  }
+
+  .card {
+    max-width: 900px; /* Max width for larger screens */
+    padding: 1rem; /* Standard padding inside the card */
+  }
+}
+

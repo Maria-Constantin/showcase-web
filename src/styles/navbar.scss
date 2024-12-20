@@ -1,0 +1,23 @@
+.navbar{
+  background-color: white;
+}
+
+.nav-link {
+  &hover {
+    background-color: black;
+    color: white;
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.brand{
+  color:#63172C;
+}
+
+.logo{
+  width: 2.5rem;
+  height: 2.5rem;
+}
