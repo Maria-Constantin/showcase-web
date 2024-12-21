@@ -1,57 +1,48 @@
-import React, { useRef } from 'react';
-import { Container } from 'react-bootstrap';
+import React from 'react';
+import { Container, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/homemaincontent.scss';
-import ScrollManager from '../components/ScrollManager';
-import FooterComponent from '../components/FooterComponent';
 import SkillsComponent from '../components/SkillsComponent';
+import ProjectCardsComponent from '../components/ProjectCards';
+import BubbleContainer from './BubbleContainer';
 
 const HomeMainContent = () => {
-  const footerRef = useRef(null);
-
   return (
     <Container fluid>
-      <ScrollManager footerRef={footerRef}>
-        {({ sectionRefs, scrollToSection, scrollToFooter }) => (
-          <>
-            {/* Intro Section */}
-            <Container
-              className='intro d-flex flex-column align-content-center justify-content-center'
-              ref={(el) => (sectionRefs.current[0] = el)}
-            >
-              <img
-                src={require('../resources/profilepicture.jpg')}
-                alt='Profile Picture'
-                className='profilepicture mb-3'
-              />
-              <h1 className='mb-3'>Maria Aurelia Constantin</h1>
-              <h2 className='lead'>
-                Aspiring Web Developer | Computer Science Graduate | Passionate About Creating Scalable, User-Centric Websites
-              </h2>
-            </Container>
+      <BubbleContainer />
+      {/* Intro Section */}
+      <div
+        className="intro d-flex flex-column align-items-center justify-content-center mb-5"
+      >
+        {/* poster */}
+        <img src={require('../resources/poster.jpg')} className='poster' />
+        <div className='text-overlay p-2'>
+          {/* intro */}
+          <h1 className='m-2'>Hi, I'm <span className='headername'>Maria Constantin</span></h1>
+          {/* Description */}
+          <p className="text-center m-2">
+            Motivated Computer Science graduate with a solid foundation in web development, user experience design, and
+            scalable application development. Passionate about building innovative, user-centric digital solutions that drive
+            engagement and business success.
+          </p>
+        </div>
+      </div>
 
-            {/* Description Section */}
-            <Container
-              className="lead description d-flex align-items-center justify-content-center"
-              ref={(el) => (sectionRefs.current[1] = el)}
-            >
-              <p className="text-center">
-                Hi there! I'm Maria, a passionate and results-driven front-end developer specializing in React and JavaScript.
-                I have a keen eye for detail and a love for building user-centric, responsive web applications.
-              </p>
-            </Container>
+      {/* Projects Section */}
+      <div>
+        <ProjectCardsComponent />
+      </div>
 
-            {/* Skills Section */}
-            <SkillsComponent sectionRefs={sectionRefs} />
+      {/* Skills Section */}
+      <SkillsComponent />
 
-            {/* Footer Section */}
-            <div ref={footerRef}>
-              <FooterComponent />
-            </div>
-          </>
-        )}
-      </ScrollManager>
+      {/* CTA Section */}
+      <div className='d-flex justify-content-center mb-3'>
+        <Button className="ctabutton">Contact me</Button>
+      </div>
+
     </Container>
+
   );
 };
 

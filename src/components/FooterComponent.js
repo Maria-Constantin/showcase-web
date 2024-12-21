@@ -5,22 +5,25 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/footer.scss';
 
-const FooterComponent = React.forwardRef((props, ref) => {
+const FooterComponent = () => {
   return (
-    <Container ref={ref} className='d-flex align-items-center footer'>
-      <Container>
-        <h1>Let's connect:</h1>
-      </Container>
-      <Container>
+    <Container className='d-flex flex-wrap justify-content-center pt-2 footer'>
+      
+        <h1 className='connecttext'>Let's connect:</h1>
+        <Container className='d-flex align-items-center justify-content-center'>
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='btn btn-lg'>
           <FontAwesomeIcon icon={faLinkedin} className='socialmedia' />
         </a>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='btn btn-lg'>
           <FontAwesomeIcon icon={faGithub} className='socialmedia' />
         </a>
+        </Container>
+      <Container className='d-flex flex-wrapalign-items-center justify-content-center'>
+        <p className='copyright'><span>&copy;</span>Copyright 2024</p>
+        <p className='author mb-1'>Made by Maria Constantin</p>
       </Container>
     </Container>
   );
-});
+};
 
 export default FooterComponent;

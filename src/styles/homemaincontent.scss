@@ -1,41 +1,85 @@
 @import './customvariables.scss';
 
-.icon{
-  font-size: 2.5em;
-  transition: transform 0.3s ease-in-out;
-  padding: 1rem;
-
-  &:hover {
-    transform: scale(1.2); 
-  }
-}
-
-.intro{
+.intro {
+  color: $light;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  background-color: $light;
   overflow: hidden;
 }
 
-.description{
-  height: 100vh;
-  background-color: $dark;
+.intro img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  width: 80%;
 }
 
-.profilepicture{
-  height: 20vh;
-  width: 20vh;
-  border-radius: 20vh;
-  border: 5px solid $dark;
-  align-self: center;
+.headername {
+  color: white;
+  text-shadow: 0.2rem 0.2rem $secondary, -0.2rem -0.3rem $contrast-active;
 }
 
-.ctasection{
+.bubble-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bubble {
+  position: absolute;
+  background-color: transparent;
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  box-shadow: 0.1rem 0.1rem #492160, 0.2rem 0.2rem #492160;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+.ctasection {
   height: 100vh;
   background-color: $dark;
 }
 
-.cta{
+.cta {
   background-color: white;
   color: $dark;
+}
+
+.ctabutton {
+  background-color: $contrast;
+  border-color: $contrast;
+  color: $primary;
+  padding: 0.5rem 1.5rem;
+  
+  &:hover {
+    background-color: $contrast-active;
+    border-color: $contrast-active;
+  }
+
+  &:active {
+    background-color: $contrast-active;
+    border-color: $contrast-active;
+  }
 }
