@@ -48,14 +48,14 @@
   padding: 0.5rem 1.5rem;
 
   &:hover {
-    background-color: $contrast-active;
-    border-color: $contrast-active;
+    background-color: $contrast-active !important;
+    border-color: $contrast-active !important;
     transform: scale(1.05);
   }
 
   &:active {
-    background-color: $contrast-active;
-    border-color: $contrast-active;
+    background-color: $contrast-active !important;
+    border-color: $contrast-active !important;
     transform: scale(0.95);
   }
 
