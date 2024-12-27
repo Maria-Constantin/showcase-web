@@ -1,28 +1,62 @@
 @import '../styles/customvariables.scss';
 
-.footer{
+.footer {
   border-top: 0.05rem solid white;
   box-shadow: 0 0.2rem inset $secondary;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+
+  @media (max-width: 768px) {
+    padding: 0.75rem 0; 
+  }
 }
 
-.socialmedia{
+.socialmedia {
   font-size: 1.5rem;
   color: white;
-  margin: 0;
+  margin: 0.5rem 0;
   padding: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem; 
+  }
 }
 
-.connecttext{
+.connecttext {
   font-size: 0.9rem;
   color: white;
-  margin: 0;
+  margin: 0.5rem 0;
   padding: 0;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 }
 
-.copyright, .author{
+.copyright,
+.author {
   font-size: 0.7rem;
-  margin: 0;
+  margin: 0.5rem 0;
   padding: 0;
   color: white;
   padding-right: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.6rem; 
+  }
+}
+
+.socialmedia {
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(1.00);
+  }
 }

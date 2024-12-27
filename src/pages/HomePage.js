@@ -8,7 +8,6 @@ import "../styles/home.scss";
 const HomePage = () => {
   return (
     <>
-      <NavbarComponent />
 
       <HomeMainContent />
 

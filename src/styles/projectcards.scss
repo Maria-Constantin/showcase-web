@@ -1,14 +1,42 @@
 @import './customvariables.scss';
 
-.projectcontainer{
+.projectcontainer {
+  margin-bottom: 1rem;
   background-color: $primary;
   color: $light;
   border: 0.3rem solid $light;
   box-shadow: 0.3rem 0.3rem $secondary, 0.3rem 0.3rem inset $contrast;
-  margin-bottom: 1.5rem;
+
+  @media screen and (min-width: 1024px) {
+    margin-right: 1.5rem;
+  }
+
+  // Add responsiveness for smaller devices
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1.5rem;
+    border: 0.2rem solid $light;
+    box-shadow: 0.2rem 0.2rem $secondary, 0.2rem 0.2rem inset $contrast;
+  }
 }
 
-.cardbutton{
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  @media screen and (min-width: 1024px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  // Adjust spacing for smaller screens
+  @media screen and (max-width: 768px) {
+    margin-top: 1rem;
+  }
+}
+
+.cardbutton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,16 +46,58 @@
   border-color: $contrast;
   color: $primary;
   padding: 0.5rem 1.5rem;
-  &:hover{
+
+  &:hover {
     background-color: $contrast-active;
-    border-color: $contrast-active
-  };
-  &:active{
+    border-color: $contrast-active;
+    transform: scale(1.05);
+  }
+
+  &:active {
     background-color: $contrast-active;
-    border-color: $contrast-active
-  };
+    border-color: $contrast-active;
+    transform: scale(0.95);
+  }
+
+  // Make buttons smaller on smaller screens
+  @media screen and (max-width: 768px) {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
-.cardtitle{
+.cardtitle {
   border-bottom: 0.1rem solid $light;
+
+  // Adjust title size for smaller devices
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    border-bottom-width: 0.08rem;
+  }
+}
+
+.projectimage {
+  height: auto; // Maintain aspect ratio
+  width: 100%;  // Ensure full width
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  // Adjust image size for smaller screens
+  @media screen and (max-width: 768px) {
+    height: auto;
+    max-height: 200px; // Limit height for small screens
+  }
+}
+
+.card-img,
+.card-img-top {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+
+  // Ensure images scale properly on smaller screens
+  @media screen and (max-width: 768px) {
+    height: auto;
+    width: 100%;
+  }
 }

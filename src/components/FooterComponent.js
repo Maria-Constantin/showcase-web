@@ -7,10 +7,11 @@ import '../styles/footer.scss';
 
 const FooterComponent = () => {
   return (
-    <Container className='d-flex flex-wrap justify-content-center pt-2 footer'>
+    <Container fluid className='d-flex flex-wrap justify-content-center pt-2 footer'>
       
-        <h1 className='connecttext'>Let's connect:</h1>
         <Container className='d-flex align-items-center justify-content-center'>
+          
+        <h1 className='connecttext'>Let's connect:</h1>
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='btn btn-lg'>
           <FontAwesomeIcon icon={faLinkedin} className='socialmedia' />
         </a>
