@@ -4,7 +4,7 @@
   background-color: $primary;
   padding: 1.5rem;
   border-radius: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.3);
+  box-shadow: 0.2rem 0.2rem $ternary, 0.2rem 0.2rem inset $contrast;
   margin: 1.5rem 0;
   display: flex;
   justify-content: center;
@@ -24,72 +24,78 @@
   }
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  max-width: 425px;
-  box-sizing: border-box;
-}
-
 .form-container {
-  width: 100%;
-  max-width: 500px;
+  max-width: 425px;
   background-color: $primary;
   border-radius: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.3);
-  padding: 2rem;
-  margin: 1.5rem auto;
+  box-shadow: 0.2rem 0.2rem $ternary, 0.2rem 0.2rem inset $contrast;
+  padding: 1.5rem 2rem;
   box-sizing: border-box;
+}
 
-
-  .formfields {
-    gap: 1.5rem;
-    box-sizing: border-box;
-  }
-
+.formfields {
+  box-sizing: border-box;
 
   .formlabel {
     display: block;
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
-}
 
+  .form-group {
+    margin-bottom: 0.5rem;
+    position: relative;
 
-.formbutton {
-  background-color: $contrast;
-  color: white;
-  border: none;
-  border-radius: 0.75rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  text-transform: uppercase;
+    input{
+      width: 100%;
+      max-width: 425px;
+      box-sizing: border-box;
+    }
 
-  &:hover {
-    background-color: $contrast-active;
-    transform: scale(1.05);
+    @media screen and (min-width: 768px) {
+      margin-bottom: 1.2rem;
+    }
+
+    .error-message {
+      color: $danger !important;
+      font-size: 0.8rem;
+      position: absolute;
+      left: 0;
+    }
   }
 
-  &:active {
-    background-color: $contrast-active;
-    transform: scale(0.95);
+  .formbutton {
+    background-color: $contrast;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $contrast-active;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      background-color: $contrast-active;
+      transform: scale(0.95);
+    }
   }
 }
-
 
 .textarea {
   resize: none;
   padding: 1rem;
+  margin-right: 1rem;
   border-radius: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 1rem;
@@ -114,12 +120,6 @@
   }
 }
 
-.error-message{
-  color: $danger;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-
 @media (max-width: 768px) {
   .form-container {
     margin: 1rem;
@@ -127,7 +127,6 @@
   }
 
   .headerform {
-    gap: 1rem;
     padding: 1rem;
   }
 

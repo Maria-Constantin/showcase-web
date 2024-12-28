@@ -8,9 +8,7 @@ import "../styles/home.scss";
 const HomePage = () => {
   return (
     <>
-
       <HomeMainContent />
-
       <FooterComponent />
     </>
   );

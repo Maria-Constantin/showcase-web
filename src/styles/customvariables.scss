@@ -11,4 +11,3 @@ $success: #75B78B;
 @mixin smooth-transition($duration: 0.3s, $timing-function: ease) {
   transition: all $duration $timing-function;
 }
-

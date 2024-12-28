@@ -8,8 +8,13 @@ import '../styles/navbar.scss';
 
 const NavbarComponent = () => {
   const [active, setActive] = useState('home');
+
+  const componentUpdate = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
-      <Navbar fluid className='bo-body-tertiary justify-content-between navbar' sticky='top' expand="lg">
+      <Navbar fluid className='bo-body-tertiary justify-content-between navbar' sticky='top' expand="lg" collapseOnSelect>
         <Container fluid="md">
           {/* logo */}
           <Navbar.Brand className='d-flex justify-content-center'>
@@ -25,10 +30,10 @@ const NavbarComponent = () => {
               activeKey={active}
               onSelect={(selectedKey) => setActive(selectedKey)}
             >
-              <Nav.Link as={Link} to="/HomePage" eventKey='home'>Home</Nav.Link>
-              <Nav.Link as={Link} to="/AboutMePage" eventKey='aboutme'>About me</Nav.Link>
-              <Nav.Link as={Link} to="/ProjectsPage" eventKey='projects'>Projects</Nav.Link>
-              <Nav.Link as={Link} to="/ContactMePage" eventKey='contactme'>Contact me</Nav.Link>
+              <Nav.Link as={Link} onClick={componentUpdate} to="/HomePage" eventKey='home'>Home</Nav.Link>
+              <Nav.Link as={Link} onClick={componentUpdate} to="/AboutMePage" eventKey='aboutme'>About me</Nav.Link>
+              <Nav.Link as={Link} onClick={componentUpdate} to="/ProjectsPage" eventKey='projects'>Projects</Nav.Link>
+              <Nav.Link as={Link} onClick={componentUpdate} to="/ContactMePage" eventKey='contactme'>Contact me</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -10,7 +10,7 @@ import './styles/navbar.scss';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
       <div className="App">
         <NavbarComponent />
         <Routes>
