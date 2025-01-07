@@ -1,0 +1,96 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+$navbar-blur: 10px;
+$navbar-bg: rgba(12, 16, 41, 0.5);
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+$font-size-base: 1rem;
+$font-size-small: 0.9rem;
+$font-size-large: 1.5rem;
+$icon-size: 2rem;
+$icon-size-small: 1.5rem;
+$logo-size: 2.5rem;
+$logo-size-small: 2rem;
+
+.navbar {
+  background-color: $navbar-bg;
+  z-index: 1000;
+  backdrop-filter: blur($navbar-blur);
+  box-shadow: 0 0.1rem 0.2rem $box-shadow-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.navbar-toggler{
+  &:focus{
+    box-shadow: none !important;
+  }
+}
+
+.navLink {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: white;
+  font-size: $font-size-base;
+  transition: all 0.3s ease;
+  color: white !important;
+
+  @include smooth-transition;
+
+  &:hover {
+    color: $ternary !important;
+  }
+
+  &.active {
+    color: $ternary;
+    font-weight: 500;
+    background-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $font-size-small;
+  }
+}
+
+.name {
+  color: white;
+  font-size: $font-size-large;
+  margin: 0;
+  text-shadow: 0 0.2rem $secondary;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.listIcon{
+  color: white;
+  font-size: $icon-size;
+
+  @media (max-width: 768px) {
+    font-size: $icon-size-small;
+  }
+}
+
+.linkstoggler {
+  background: transparent;
+  border: none;
+  
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+.menu {
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+}

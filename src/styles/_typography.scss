@@ -1,0 +1,11 @@
+@mixin font-size($small: 1rem, $medium: 1.5rem, $large: 2rem) {
+  font-size: $small;
+
+  @media (min-width: 768px) {
+    font-size: $medium;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: $large;
+  }
+}

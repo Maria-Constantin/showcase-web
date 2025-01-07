@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  border-top: 0.05rem solid white;
+  box-shadow: 0 0.2rem inset $secondary;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+}
+
+.connecttext {
+  color: white;
+  padding-left: 1rem;
+}
+
+.socialmedia {
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.overbutton{
+  margin: 0 1rem;
+}
+
+.tooltipText {
+  color: #fff;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0;
+  max-width: 150px;
+  min-width: 120px;
+  width: auto;
+  position: absolute;
+  text-align: center;
+}
+
+.copyright,
+.author {
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.copyright span {
+  font-weight: bold;
+}
+
+@media (min-width: 1440px) {
+  .socialmedia {
+    font-size: 2rem;
+  }
+}

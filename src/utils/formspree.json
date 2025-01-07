@@ -1,0 +1,27 @@
+{
+  "forms": {
+    "${process.env.REACT_APP_FORM_ID}": {
+      "name": "Email Form",
+      "actions": [
+        {
+          "type": "email",
+          "to": "${process.env.REACT_APP_EMAIL_ADDRESS}"
+        }
+      ],
+      "fields": {
+        "name": {
+          "required": true,
+          "type": "name"
+        },
+        "email": {
+          "required": true,
+          "type": "email"
+        },
+        "message": {
+          "required": true,
+          "type": "message"
+        }
+      }
+    }
+  }
+}

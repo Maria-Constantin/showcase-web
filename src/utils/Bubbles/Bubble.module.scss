@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.bubble {
+  position: absolute;
+  background-color: transparent;
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  box-shadow: 0.2rem 0.2rem $secondary, 0.2rem 0.2rem inset $contrast;
+  pointer-events: none;
+  z-index: -1;
+  animation: bubble 10s infinite;
+
+  @media (max-width: 768px) {
+    border: 0.1rem solid white;
+    box-shadow: 0.05rem 0.05rem $secondary, 0.1rem 0.1rem inset $contrast;
+  }
+}

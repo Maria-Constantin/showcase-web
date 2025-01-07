@@ -1,0 +1,118 @@
+@import '../../styles/variables.scss';
+
+.projectcontainer {
+  margin-bottom: 1rem;
+  background-color: $primary;
+  color: $light;
+  border: 0.3rem solid $light;
+  box-shadow: 0.3rem 0.3rem $secondary, 0.3rem 0.3rem inset $contrast;
+
+  @media screen and (min-width: 1024px) {
+    margin-right: 1.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1.5rem;
+    border: 0.2rem solid $light;
+    box-shadow: 0.2rem 0.2rem $secondary, 0.2rem 0.2rem inset $contrast;
+  }
+}
+
+.header{
+  color: white;
+  text-shadow: 0 0.2rem $secondary;
+
+  @media (min-width: 1440px) {
+    font-size: 2.5rem;
+  }
+}
+
+.rounded-pill {
+  width: 2rem;
+  height: 0.2rem;
+  border-radius: 5rem;
+  background-color: white;
+  margin-bottom: 1rem;
+
+  @media (min-width: 1440px) {
+    width: 4rem;
+    height: 0.4rem;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  @media screen and (min-width: 1024px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1rem;
+  }
+}
+
+.cardbutton {
+  background-color: $contrast;
+  border-color: $contrast;
+  color: $primary;
+  padding: 0.5rem 1.5rem;
+
+  &:hover {
+    background-color: $contrast-active !important;
+    border-color: $contrast-active !important;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: $contrast-active !important;
+    border-color: $contrast-active !important;
+    transform: scale(0.95);
+  }
+
+  &:disabled{
+    background-color: $contrast-active !important;
+    border-color: $contrast-active !important;
+    transform: scale(0.95);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.cardtitle {
+  border-bottom: 0.1rem solid $light;
+  font-size: 1.5rem;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    border-bottom-width: 0.08rem;
+  }
+}
+
+.cardText{
+  font-size: 1rem;
+}
+
+.projectimage {
+  height: auto;
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    max-height: 200px;
+  }
+}
