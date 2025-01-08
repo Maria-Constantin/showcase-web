@@ -1,4 +1,4 @@
-# Maria Constantin's Portfolio
+# My Portfolio
 
 Welcome to my portfolio! I'm Maria Constantin, a motivated Computer Science graduate with a solid foundation in web development, user experience design, and scalable application development. I'm passionate about building mobile-first, innovative, and user-centric digital solutions.
 
