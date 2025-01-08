@@ -45,7 +45,7 @@ A smart travel app that provides tourism advice and recommendations for the city
 
 Feel free to reach out if you have any questions or would like to connect!
 
-[LinkedIn](https://www.linkedin.com/in/your-profile)
+[LinkedIn](https://www.linkedin.com/in/maria-constantin-72b820209/)
 
 ---
 
